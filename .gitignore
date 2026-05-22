@@ -1,0 +1,51 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# environment variables
+.env
+.env.local
+**/.env
+**/.env.local
+
+# mongodb local database files and folder
+data/
+mongodb-data/
+.mongodb_data/
+test_db/
+**/test_db/
+**/.mongodb_data/
+**/*.wt
+**/*.lock
+**/*.ns
+
+# uploads
+uploads/
+**/uploads/
+
+# logs
+logs/
+*.log
+npm-debug.log*
+**/*.log
+
+# build folders
+dist/
+build/
+**/dist/
+**/build/
+
+# cache
+.cache/
+**/.cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# vscode
+.vscode/
+
+# temp assets
+compressed_new.png
+

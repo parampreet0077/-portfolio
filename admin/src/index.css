@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --border: #e5e7eb;
+  --accent: #6366f1;
+  --accent-2: #8b5cf6;
+  --shadow-md: 0 4px 20px rgba(99,102,241,0.10);
+  --shadow-lg: 0 8px 40px rgba(99,102,241,0.15);
+}
+body { margin: 0; background: #f9fafb; color: #111827; font-family: "Inter", sans-serif; }
+h1, h2, h3 { font-family: "Plus Jakarta Sans", sans-serif; letter-spacing: 0; }
+button, input, textarea, a { transition: 0.2s ease; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow-md); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 10px; padding: 12px 18px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: var(--shadow-md); }
+.btn:hover { transform: scale(1.02); box-shadow: var(--shadow-lg); }
+.btn-soft { border-radius: 10px; border: 1px solid var(--border); padding: 10px 14px; font-weight: 700; background: #fff; color: #374151; }
+.input { width: 100%; border: 1.5px solid var(--border); border-radius: 10px; padding: 12px 14px; outline: 0; background: #fff; }
+.input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(99,102,241,.10); }
+.page-title { margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.page-title h1 { font-size: 30px; font-weight: 800; }
+@keyframes shake { 10%, 90% { transform: translateX(-8px); } 20%, 80% { transform: translateX(8px); } 30%, 50%, 70% { transform: translateX(-6px); } 40%, 60% { transform: translateX(6px); } }
+.shake { animation: shake .42s; }
+@keyframes pulseSoft { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.08); opacity: .65; } }
+@media (max-width: 900px) {
+  .admin-main { margin-left: 0 !important; padding: 90px 18px 24px !important; }
+  .admin-sidebar { width: 100% !important; height: 70px !important; overflow-x: auto; }
+  .admin-sidebar nav, .admin-sidebar .side-footer { display: none; }
+}
