@@ -7,7 +7,7 @@ module.exports = function authMiddleware(req, res, next) {
   if (!token) return res.status(401).json({ message: "Unauthorized" });
 
   try {
-    req.user = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = jwt.verify(token, process.env.JWT_SECRET || "fallback_secret");
     next();
   } catch (_error) {
     res.status(401).json({ message: "Unauthorized" });
