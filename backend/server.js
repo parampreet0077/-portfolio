@@ -44,6 +44,30 @@ app.use("/api/auth", authRoutes);
 
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 
+const Admin = require("./models/Admin");
+const bcrypt = require("bcryptjs");
+
+async function seedDefaultAdmin() {
+  try {
+    const exists = await Admin.exists({});
+    if (!exists) {
+      const passwordHash = await bcrypt.hash("admin", 10);
+      await Admin.create({
+        name: "Admin",
+        email: "admin@portfolio.com",
+        passwordHash,
+        theme: "light",
+        accentColor: "#7c3aed"
+      });
+      console.log("✅ Default admin seeded successfully (admin@portfolio.com / admin)");
+    }
+  } catch (err) {
+    console.error("Error seeding default admin:", err.message);
+  }
+}
+
+seedDefaultAdmin();
+
 app.use((err, _req, res, _next) => {
   const status = err.status || 500;
   res.status(status).json({ message: err.message || "Server error" });
