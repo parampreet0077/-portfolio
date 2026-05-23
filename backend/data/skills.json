@@ -1,0 +1,152 @@
+[
+  {
+    "educationData": {
+      "courseName": "B.A (bachelors of arts)",
+      "platform": "MGSU University",
+      "completionPercentage": 0,
+      "duration": "2020-2023",
+      "certificateLink": "",
+      "status": "Graduate"
+    },
+    "programmingData": {
+      "projectsUsedIn": 0,
+      "githubLink": "",
+      "experienceYears": 0
+    },
+    "_id": "6a06d20740d4e0fe11928e26",
+    "skillName": "Graduation",
+    "percentage": 67,
+    "category": "Education",
+    "icon": "",
+    "colorTheme": "#7c3aed",
+    "experienceLevel": "Intermediate",
+    "order": 0,
+    "createdAt": "2026-05-15T07:57:59.453Z",
+    "__v": 0
+  },
+  {
+    "educationData": {
+      "courseName": "MCA(Master of Computer Applications)",
+      "platform": "Jaipur National University , jaipur",
+      "completionPercentage": 0,
+      "duration": "2025-2027",
+      "certificateLink": "",
+      "status": "current learning"
+    },
+    "programmingData": {
+      "projectsUsedIn": 0,
+      "githubLink": "",
+      "experienceYears": 0
+    },
+    "_id": "6a06d2b040d4e0fe11928e2b",
+    "skillName": "Post Graduation",
+    "percentage": null,
+    "category": "Education",
+    "icon": "",
+    "colorTheme": "#7c3aed",
+    "experienceLevel": "Advanced",
+    "order": 0,
+    "createdAt": "2026-05-15T08:00:48.027Z",
+    "__v": 0
+  },
+  {
+    "educationData": {
+      "courseName": "DCSC course",
+      "platform": "Drop organization(cyber experts)",
+      "completionPercentage": 0,
+      "duration": "6 months",
+      "certificateLink": "",
+      "status": "current learning"
+    },
+    "programmingData": {
+      "projectsUsedIn": 0,
+      "githubLink": "",
+      "experienceYears": 0
+    },
+    "_id": "6a06d34440d4e0fe11928e2e",
+    "skillName": "Cyber Security ",
+    "percentage": 0,
+    "category": "Education",
+    "icon": "",
+    "colorTheme": "#7c3aed",
+    "experienceLevel": "Beginner",
+    "order": 0,
+    "createdAt": "2026-05-15T08:03:16.256Z",
+    "__v": 0
+  },
+  {
+    "educationData": {
+      "courseName": "",
+      "platform": "",
+      "completionPercentage": 0,
+      "duration": "",
+      "certificateLink": "",
+      "status": ""
+    },
+    "programmingData": {
+      "projectsUsedIn": 5,
+      "githubLink": "https://github.com/parampreet0077",
+      "experienceYears": 0
+    },
+    "_id": "6a06d47240d4e0fe11928e4f",
+    "skillName": "C, C++, Python, Html, CSS, Php",
+    "percentage": 0,
+    "category": "Programming",
+    "icon": "",
+    "colorTheme": "#7c3aed",
+    "experienceLevel": "Intermediate",
+    "order": 0,
+    "createdAt": "2026-05-15T08:08:18.455Z",
+    "__v": 0
+  },
+  {
+    "educationData": {
+      "courseName": "",
+      "platform": "",
+      "completionPercentage": 0,
+      "duration": "",
+      "certificateLink": "",
+      "status": ""
+    },
+    "programmingData": {
+      "projectsUsedIn": 0,
+      "githubLink": "",
+      "experienceYears": 0
+    },
+    "_id": "6a06d55840d4e0fe11928e6c",
+    "skillName": "Linux os, Vscode, Antigravity, Cursor",
+    "percentage": 0,
+    "category": "Tools",
+    "icon": "",
+    "colorTheme": "#7c3aed",
+    "experienceLevel": "Advanced",
+    "order": 0,
+    "createdAt": "2026-05-15T08:12:08.600Z",
+    "__v": 0
+  },
+  {
+    "educationData": {
+      "courseName": "",
+      "platform": "",
+      "completionPercentage": 0,
+      "duration": "",
+      "certificateLink": "",
+      "status": ""
+    },
+    "programmingData": {
+      "projectsUsedIn": 3,
+      "githubLink": "https://github.com/parampreet0077",
+      "experienceYears": 0
+    },
+    "_id": "6a06d5ce40d4e0fe11928e89",
+    "skillName": "Mysql ,Mangodb",
+    "percentage": 0,
+    "category": "Programming",
+    "icon": "",
+    "colorTheme": "#7c3aed",
+    "experienceLevel": "Intermediate",
+    "order": 0,
+    "createdAt": "2026-05-15T08:14:06.011Z",
+    "__v": 0
+  }
+]

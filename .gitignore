@@ -10,6 +10,7 @@ node_modules/
 
 # mongodb local database files and folder
 data/
+!backend/data/
 mongodb-data/
 .mongodb_data/
 test_db/

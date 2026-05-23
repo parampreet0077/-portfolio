@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "6a06d94f40d4e0fe11928eb0",
+    "certificateName": "CPP",
+    "issuer": "IIT bombe",
+    "date": "2025",
+    "credentialLink": "",
+    "certificateImage": "/uploads/1778833743056-Screenshot-2026-05-15-135818.png",
+    "order": 0,
+    "createdAt": "2026-05-15T08:29:03.058Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a06da0f40d4e0fe11928eb3",
+    "certificateName": "C",
+    "issuer": "IIT bombe",
+    "date": "2025",
+    "credentialLink": "",
+    "certificateImage": "/uploads/1778833935288-Screenshot-2026-05-15-140141.png",
+    "order": 0,
+    "createdAt": "2026-05-15T08:32:15.289Z",
+    "__v": 0
+  }
+]
