@@ -2,6 +2,7 @@ const express = require("express");
 const Project = require("../models/Project");
 const auth = require("../middleware/authMiddleware");
 const { imageUpload } = require("./upload");
+const cloudinaryUpload = require("../middleware/cloudinaryUpload");
 
 const router = express.Router();
 
@@ -13,10 +14,12 @@ const parseProjectData = (req) => {
   if (typeof data.images === 'string') data.images = JSON.parse(data.images);
   
   if (req.files) {
-    if (req.files.thumbnail) data.thumbnail = `/uploads/${req.files.thumbnail[0].filename}`;
+    if (req.files.thumbnail) {
+      data.thumbnail = req.files.thumbnail[0].cloudinaryUrl || `/uploads/${req.files.thumbnail[0].filename}`;
+    }
     if (req.files.images) {
       const existingImages = Array.isArray(data.images) ? data.images : [];
-      const newImages = req.files.images.map(f => `/uploads/${f.filename}`);
+      const newImages = req.files.images.map(f => f.cloudinaryUrl || `/uploads/${f.filename}`);
       data.images = [...existingImages, ...newImages];
     }
   }
@@ -33,7 +36,7 @@ router.get("/", async (_req, res, next) => {
 
 const uploadFields = imageUpload.fields([{ name: 'thumbnail', maxCount: 1 }, { name: 'images', maxCount: 10 }]);
 
-router.post("/", auth, uploadFields, async (req, res, next) => {
+router.post("/", auth, uploadFields, cloudinaryUpload, async (req, res, next) => {
   try {
     const project = await Project.create(parseProjectData(req));
     res.status(201).json(project);
@@ -42,7 +45,7 @@ router.post("/", auth, uploadFields, async (req, res, next) => {
   }
 });
 
-router.put("/:id", auth, uploadFields, async (req, res, next) => {
+router.put("/:id", auth, uploadFields, cloudinaryUpload, async (req, res, next) => {
   try {
     const project = await Project.findByIdAndUpdate(req.params.id, parseProjectData(req), { new: true, runValidators: true });
     if (!project) return res.status(404).json({ message: "Project not found" });

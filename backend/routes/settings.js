@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const Admin = require("../models/Admin");
 const auth = require("../middleware/authMiddleware");
 const { imageUpload } = require("./upload");
+const cloudinaryUpload = require("../middleware/cloudinaryUpload");
 
 const router = express.Router();
 
@@ -16,7 +17,7 @@ router.get("/", auth, async (req, res, next) => {
   }
 });
 
-router.put("/", auth, imageUpload.single("profileImage"), async (req, res, next) => {
+router.put("/", auth, imageUpload.single("profileImage"), cloudinaryUpload, async (req, res, next) => {
   try {
     const { name, theme, accentColor, newPassword } = req.body;
     const updates = {};
@@ -29,7 +30,7 @@ router.put("/", auth, imageUpload.single("profileImage"), async (req, res, next)
     }
     
     if (req.file) {
-      updates.profileImage = `/uploads/${req.file.filename}`;
+      updates.profileImage = req.file.cloudinaryUrl || `/uploads/${req.file.filename}`;
     }
 
     const admin = await Admin.findByIdAndUpdate(req.user.id, updates, { new: true, runValidators: true }).select("-passwordHash");

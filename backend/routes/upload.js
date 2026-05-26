@@ -1,13 +1,7 @@
 const path = require("path");
 const multer = require("multer");
 
-const storage = multer.diskStorage({
-  destination: (_req, _file, cb) => cb(null, "uploads/"),
-  filename: (_req, file, cb) => {
-    const safe = file.originalname.replace(/[^a-zA-Z0-9._-]/g, "-");
-    cb(null, `${Date.now()}-${safe}`);
-  }
-});
+const storage = multer.memoryStorage();
 
 const makeUpload = (allowed, message) =>
   multer({
